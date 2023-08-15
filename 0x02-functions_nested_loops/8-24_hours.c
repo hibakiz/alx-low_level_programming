@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  jack_bauer - tasks.
- * 
+ *
  *
  * Return:Alwajs 0.
  */

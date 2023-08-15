@@ -10,11 +10,6 @@ int main(void)
 {
     int r;
 
-    print_last_digit(98);
-    print_last_digit(0);
-    r = print_last_digit(-10243);
-    putchar('0' + r);
-    putchar('\n');
-    printf("%d", r);
+    jack_bauer();
     return (0);
 }
