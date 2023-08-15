@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *  _abs(int) - tasks.
+ *  _abs - tasks.
  * @n:  is the input
  *
  * Return:Always 0.
