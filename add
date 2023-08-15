@@ -1,0 +1,5 @@
+#!/bin/bash
+git add .
+git commit -m "tt"
+git reset 0x02-functions_nested_loops/main.c
+git push
