@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * pritn_alphabet_x10 - print a-z 10 times.
+ * print_alphabet_x10 - print a-z 10 times.
  *
  * Return: Always 0.
  */
