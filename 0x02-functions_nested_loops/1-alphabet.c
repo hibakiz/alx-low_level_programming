@@ -1,11 +1,14 @@
 #include"main.h"
 /**
- * main - Entry point
+ * main - check the code for Holberton School students.
  *
- * Description: 'print using puts'
- *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
 void print_alphabet(void)
 {
 	int i;
@@ -15,9 +18,4 @@ void print_alphabet(void)
 	putchar(i);
 	}
 	putchar('\n');
-}
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
