@@ -1,17 +1,20 @@
-#include <stdio.h>
-#include <limits.h>
 #include "main.h"
+#include<stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int r;
+    int r;
 
-	r = _abs(-1);
-	printf("%d\n", r);
-	return (0);
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-10243);
+    putchar('0' + r);
+    putchar('\n');
+    printf("%d", r);
+    return (0);
 }
