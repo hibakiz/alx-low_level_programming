@@ -1,4 +1,10 @@
-#include"main.h"
+#include "main.h"
+/**
+ * print_alphabet - printi a-z.
+ *
+ * Return: Always 0.
+ */
+void print_alphabet(void)
 {
 	int i;
 
