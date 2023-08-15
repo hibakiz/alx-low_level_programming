@@ -1,25 +1,18 @@
 #include "main.h"
 /**
- *  _abs(int) - test if a char.
+ *  _abs(int) - tasks.
  * @n:  is the input
  *
  * Return:Always 0.
  */
-int print_sign(int n)
+int _abs(int n)
 {
-	if (n > 0)
+	if (n >= 0)
 	{
-	_putchar ('+');
-	return (1);
-	}
-	else if (n == 0)
-	{
-	_putchar ('0');
-	return (0);
+	return (n);
 	}
 	else
 	{
-	_putchar ('-');
-	return (-1);
+	return (n*=-1);
 }
 }
