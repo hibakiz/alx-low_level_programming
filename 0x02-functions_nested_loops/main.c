@@ -10,6 +10,6 @@ int main(void)
 {
     int r;
 
-    jack_bauer();
+    print_to_98(0);
     return (0);
 }
