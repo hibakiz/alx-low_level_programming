@@ -22,9 +22,9 @@
 				{
 				printf("%d, ", i * j);
 				_putchar('\n');
+				}
 				else
-				printf("%d\n");
-			}
+				printf("%d\n", i * j);
 			}
 			_putchar('\n');
 		
