@@ -6,7 +6,6 @@
  *
  * Return:Alwajs 0.
  */
- 
 int main(void)
 {
 	int count = 2;
