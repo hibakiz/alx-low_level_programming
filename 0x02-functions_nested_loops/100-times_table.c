@@ -20,8 +20,10 @@
 			{
 				if(j!=n)
 				{
-				printf("%d,  ", i * j);
-				_putchar('\n');
+				_putchar('0' + i * j);
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				}
 				else
 				printf("%d\n", i * j);
