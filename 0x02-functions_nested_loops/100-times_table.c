@@ -20,7 +20,7 @@
 			{
 				if(j!=n)
 				{
-				printf("%d, ", i * j);
+				printf("%d,  ", i * j);
 				_putchar('\n');
 				}
 				else
