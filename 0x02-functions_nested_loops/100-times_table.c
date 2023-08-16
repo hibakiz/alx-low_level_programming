@@ -8,7 +8,7 @@
  */
  void print_times_table(int n)
 {
-	int i, j, k;
+	int i, j;
 	
 	if (n > 15 || n < 0)
 	printf("wtf");
@@ -20,7 +20,7 @@
 			{
 				printf("%d, ", i * j);
 			}
-			putchar('\n');
+			_putchar('\n');
 		
 		}
 	} 
