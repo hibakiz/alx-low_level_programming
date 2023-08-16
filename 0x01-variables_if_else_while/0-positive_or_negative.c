@@ -8,7 +8,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int positive_or_negative(int)
 {
 	int n;
 
