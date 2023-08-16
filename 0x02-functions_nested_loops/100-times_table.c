@@ -26,7 +26,10 @@
 				_putchar(' ');
 				}
 				else
-				printf("%d\n", i * j);
+				{
+				_putchar('0' + i * j);
+				_putchar('\n');
+			}
 			}
 			_putchar('\n');
 		
