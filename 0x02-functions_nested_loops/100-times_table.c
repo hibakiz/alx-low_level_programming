@@ -18,7 +18,13 @@
 		{
 			for (j = 0; j <= n ; j++)
 			{
+				if(j!=n)
+				{
 				printf("%d, ", i * j);
+				_putchar('\n');
+				else
+				printf("%d\n");
+			}
 			}
 			_putchar('\n');
 		
