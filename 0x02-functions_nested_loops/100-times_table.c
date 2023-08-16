@@ -18,7 +18,7 @@
 		{
 			for (j = 0; j <= n ; j++)
 			{
-				if(j!=n)
+				if(j != n)
 				{
 				_putchar('0' + i * j);
 				_putchar(',');
