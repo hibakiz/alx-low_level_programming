@@ -24,6 +24,6 @@ int main(void)
 	*	i--;
 	* }
 	*/
-	printf("4019\n");
+	printf("%d\n", 3 * 4019);
 	return (0);
 }
