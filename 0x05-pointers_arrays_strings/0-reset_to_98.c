@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - Entry point
+ * reset_to_98 - Entry point
  *@n: int
  * Description: 'tsks'
  *
