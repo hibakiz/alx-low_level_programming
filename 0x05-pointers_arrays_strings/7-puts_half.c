@@ -1,4 +1,5 @@
 #include "main.h"
+#include<stdio.h>
 /**
  * puts_half - Entry point
  *@str: int
@@ -19,13 +20,14 @@ void puts_half(char *str)
 			break;
 		leng++;
 	}
-	if (leng % 2 == 0)
-		half = (leng - 1) / 2;
-	else
-		half = (leng - 2) / 2;
+	half = leng / 2;
 	while (half < leng)
 	{
-		_putchar(*(str + half));
+		if (leng % 2 == 0)
+			_putchar(*(str + half));
+		else
+			_putchar(*(str + half + 1));
+
 		half++;
 	}
 	_putchar('\n');
