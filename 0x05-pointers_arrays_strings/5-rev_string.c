@@ -12,7 +12,7 @@ void rev_string(char *s)
 {
 	int i = 0;
 	int leng = 0;
-	char r[100];
+	char r[1000];
 
 	while (1)
 	{
@@ -20,6 +20,7 @@ void rev_string(char *s)
 			break;
 		leng++;
 	}
+	
 	while (leng > 0)
 	{
 		r[i] = *(s + leng - 1);
