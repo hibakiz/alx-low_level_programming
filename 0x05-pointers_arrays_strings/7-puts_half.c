@@ -21,19 +21,15 @@ void puts_half(char *str)
 		leng++;
 	}
 	half = leng / 2;
-	while (1)
+	while (*(str + half) != 0)
 	{
 		if (leng % 2 == 0)
 		{
 			_putchar(*(str + half));
-			if (half >= leng)
-				break;
 		}
 		else
 		{
 			_putchar(*(str + half + 1));
-			if (half >= leng - 1)
-			break;
 		}
 		half++;
 	}
