@@ -19,8 +19,8 @@ void puts_half(char *str)
 			break;
 		leng++;
 	}
-	half = leng / 2;
-	while (*(str + half) != '\0')
+	half = leng / 2 + 1;
+	while (half < leng)
 	{
 		_putchar(*(str + half));
 		half++;
