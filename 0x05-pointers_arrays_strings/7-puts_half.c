@@ -31,8 +31,7 @@ void puts_half(char *str)
 		}
 		else
 		{
-			
-			if (*(str + half + 1) != '\0')
+			if (*(str + half + 1) == '\0')
 				break;
 			_putchar(*(str + half + 1));
 		}
