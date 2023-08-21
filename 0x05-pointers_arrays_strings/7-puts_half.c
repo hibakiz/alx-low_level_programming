@@ -25,15 +25,16 @@ void puts_half(char *str)
 	{
 		if (leng % 2 == 0)
 		{
-			_putchar(*(str + half));
 			if (*(str + half) == '\0')
-			break;
+				break;
+			_putchar(*(str + half));
 		}
 		else
 		{
-			_putchar(*(str + half + 1));
+			
 			if (*(str + half + 1) != '\0')
-			break;
+				break;
+			_putchar(*(str + half + 1));
 		}
 		half++;
 	}
