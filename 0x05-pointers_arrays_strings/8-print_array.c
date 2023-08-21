@@ -13,9 +13,11 @@ void print_array(int *a, int n)
 {
 	int i;
 
+	if (n <= 0)
+	printf("\n");
 	for (i = 0; i < n; i++)
 	{
-		if (*(a + i + 1) == '\0')
+		if (*(a + (i + 1)) == '\0')
 			printf("%d\n", *(a + i));
 		else
 			printf("%d, ", *(a + i));
