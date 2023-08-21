@@ -19,10 +19,10 @@ void puts_half(char *str)
 			break;
 		leng++;
 	}
-	if ( leng % 2 == 0)
-		half = leng / 2;
-	else
+	if (leng % 2 == 0)
 		half = (leng - 1) / 2;
+	else
+		half = (leng - 2) / 2;
 	while (half < leng)
 	{
 		_putchar(*(str + half));
