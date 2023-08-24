@@ -11,7 +11,7 @@
 char *cap_string(char *str)
 {
 	int i, j;
-	char sp[] = "\t\n,;.!?\"(){} ";
+	char sp[] = ",;.!?(){}\n\t\" ";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
