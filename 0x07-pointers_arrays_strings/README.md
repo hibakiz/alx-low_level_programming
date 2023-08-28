@@ -1,0 +1,1 @@
+sevdik saniyorlar yaaa, oukuzlar
