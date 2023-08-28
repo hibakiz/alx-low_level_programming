@@ -1,28 +1,28 @@
 #include "main.h"
 /**
- * _strspn - Entry point
+ * _strpbrk - Entry point
  *
  * Description: 'tsks'
  * @accept: char
  * @s: char
  * Return: Always 0 (Success)
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int j = 0, c = 0, i = 0;
+	int j = 0, i = 0;
+	char *p;
 
-
-	while (*(s + i) != '\0' && *(accept + j) != '\0')
+	while (*(s + i) != '\0')
 	{
 		for (j = 0; *(accept + j) != '\0'; j++)
 		{
 			if (*(s + i) == *(accept + j))
 			{
-				c++;
-				break;
+				p = &s[i];
+				return (p);
 			}
 		}
 		i++;
 	}
-	return (c);
+	return ('\0');
 }
