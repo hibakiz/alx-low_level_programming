@@ -17,13 +17,12 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * _sqrt_fun - Entry point
- * Description: 'tsks'
- * @n: char
- * @x: int
- * Return: Always 0 (Success)
- */
- 
+* sqrt_fun - Entry point
+* Description: 'tsks'
+* @n: char
+* @x: int
+* Return: Always 0 (Success)
+*/
 int sqrt_fun(int n, int x)
 {
 	if (n == x * x)
