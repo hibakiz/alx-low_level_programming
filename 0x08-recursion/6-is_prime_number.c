@@ -32,7 +32,7 @@ int is_prime_number(int n)
  * @x: int
  * Return: Always 0 (Success)
  */
- 
+
 int prime_number(int x, int n)
 {
 	if (x < n)
