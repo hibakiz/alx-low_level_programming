@@ -7,23 +7,23 @@
  * @argv: int
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
 
 	int i, x, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(*argv[i] >= 48 && *argv[i] <= 57))
+		for (x = 0; argv[i][x]; x++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][x] < '0' || argv[i][x] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			x = atoi(argv[i]);
-			sum = sum + x;
-		}
+
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
