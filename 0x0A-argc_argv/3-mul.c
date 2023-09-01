@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include <stdint.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  * @argc: int
@@ -11,13 +11,17 @@ int main(int argc, char *argv[])
 {
 
 	if (argc < 3)
+	{
 		printf("Error\n");
+		return (1);
+	}
 	else
 	{
-		int x = (int)*argv[1] - '0';
-		int y = (int)*argv[2] - '0';
+		 int x = atoi(argv[1]);
+		 int y = atoi(argv[2]);
+		 int z = x * y;
 
-		printf("%d\n", x * y);
+		printf("%d\n", z);
 	}
 	return (0);
 }
