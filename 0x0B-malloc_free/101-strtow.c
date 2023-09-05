@@ -2,9 +2,9 @@
 #include<stdlib.h>
 #include<stdio.h>
 /**
-* argstostr- check the code
-* @ac: int
-* @av: int
+* count_word- check the code
+* @s: int
+*
 * Return: Always 0.
 */
 int count_word(char *s)
