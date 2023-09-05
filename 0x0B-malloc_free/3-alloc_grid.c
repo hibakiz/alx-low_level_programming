@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 /**
-* alloc_size - check the code
+* alloc_grid - check the code
 * @width: int
 * @height: int
 * Return: Always 0.
