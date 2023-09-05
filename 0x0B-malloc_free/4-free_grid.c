@@ -3,7 +3,7 @@
 
 /**
 * free_grid - check the code
-* @width: int
+* @grid: int
 * @height: int
 * Return: Always 0.
 */
