@@ -1,10 +1,12 @@
 #include "main.h"
 #include<stdlib.h>
+
 /**
- * _strdup - check the code
- * @str: int
- * Return: Always 0.
- */
+* _strdup - check the code
+* @str: int
+* Return: Always 0.
+*/
+
 char *_strdup(char *str)
 {
 	char *p;
@@ -13,7 +15,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (s = 0; str[s] != '\n'; s++)
+	for (s = 0; str[s] != '\0'; s++)
 		;
 
 	p = malloc(s * sizeof(*p) + 1);
