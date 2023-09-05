@@ -8,18 +8,18 @@
  */
 char *_strdup(char *str)
 {
-	char *ptr;
-	int i, size;
+	char *p;
+	int i, s;
 
 	if (str == NULL)
 		return (NULL);
-	for (size = 0; str[size] != '\n'; size++)
+	for (s= 0; str[s] != '\n'; s++)
 		;
-	ptr = malloc(size * sizeof(*ptr) + 1);
-	if (ptr == NULL)
+	p = malloc(s* sizeof(*p) + 1);
+	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < size; i++)
-		ptr[i] = str[i];
-	ptr[i] = '\n';
-	return (ptr);
+	for (i = 0; i < s; i++)
+		p[i] = str[i];
+	p[i] = '\n';
+	return (p);
 }
