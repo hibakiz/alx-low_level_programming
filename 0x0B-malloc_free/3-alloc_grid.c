@@ -9,7 +9,7 @@
 */
 
 
-int **alloc_size(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int **size;
 	int i, j;
