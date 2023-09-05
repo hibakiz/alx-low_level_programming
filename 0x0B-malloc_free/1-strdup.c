@@ -13,13 +13,18 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	for (s= 0; str[s] != '\n'; s++)
+
+	for (s = 0; str[s] != '\n'; s++)
 		;
-	p = malloc(s* sizeof(*p) + 1);
+
+	p = malloc(s * sizeof(*p) + 1);
+
 	if (p == NULL)
 		return (NULL);
+
 	for (i = 0; i < s; i++)
 		p[i] = str[i];
+
 	p[i] = '\n';
 	return (p);
 }
