@@ -5,7 +5,7 @@
  * _realloc - check the code
  * @ptr: char
  * @old_size: char
- * @new_size
+ * @new_size: int
  * Return: Always 0.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
