@@ -4,10 +4,9 @@
 #include "dog.h"
 
 /**
- * new_dog - check the code
-* @name: int
- * @age: int
- * @owner: int
+ * free_dog - check the code
+*
+* @d: int
  * Return: Always 0.
  */
 void free_dog(dog_t *d)
