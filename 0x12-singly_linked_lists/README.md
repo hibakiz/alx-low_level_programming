@@ -1,0 +1,1 @@
+guclu olmak lazim
