@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * print_list - function name
  * @h : var
@@ -7,8 +6,9 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t el = 0;
+	size_t el;
 
+	el = 0;
 		while (h != NULL)
 		{
 			el++;
