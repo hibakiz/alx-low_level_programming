@@ -1,12 +1,15 @@
-extern printf
-global main
+SECTION .data
+string:	db "Hello, Holberton", 0
+format:	db "%s", 10, 0
 
-section .text
+	SECTION .text
+	extern printf
+	global main
 main:
-  mov rdi, message
-  call printf
-  mov rax, 60
-  xor rdi, rdi
-  syscall
-section .data
-message: db "Hello, Holberton\n", 0
+	mov esi, string
+	mov edi, format
+	mov eax, 0
+	call printf
+
+	mov eax, 0
+	ret
