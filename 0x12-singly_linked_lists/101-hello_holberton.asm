@@ -1,3 +1,4 @@
+extern printf
 global main
 
 section .text
