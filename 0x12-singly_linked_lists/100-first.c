@@ -7,5 +7,5 @@
 void before_main(void)
 {
 	printf("You're beat!");
-	printf("and yet, you must allow,\nI bore my house upon my back!\n");
+	printf(" and yet, you must allow,\nI bore my house upon my back!\n");
 }
