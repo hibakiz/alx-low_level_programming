@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_help - frees 
+ * free_help - frees
  * @head: dfghj
  *
  * Return: nyujk
