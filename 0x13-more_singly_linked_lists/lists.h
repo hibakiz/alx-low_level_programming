@@ -48,6 +48,7 @@ void free_helper(listp_t **head);
 size_t print_listint_safe(const listint_t *head);
 void free_help(listp_t **head);
 size_t free_listint_safe(listint_t **h);
+listint_t *find_listint_loop(listint_t *head);
 
 
 #endif
