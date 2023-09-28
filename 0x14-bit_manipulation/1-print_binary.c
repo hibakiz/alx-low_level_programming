@@ -14,10 +14,10 @@ void print_binary(unsigned long int n)
 		bit = (n >> i) & 1;
 		if (bit || test || i == 0)
 		{
-			printf("%d", bit);
+			_putchar(bit + '0');
 			test = 1;
 		}
 	}
 	if (!test)
-		printf("0");
+		_putchar('0');
 }
