@@ -29,6 +29,9 @@ int create_file(const char *filename, char *text_content)
 
 	write_ = write(fd, text_content, sizeof(text_content) - 1);
 	if (write_ == -1)
+	{
+		close(fd);
 		return (-1);
+	}
 	return (1);
 }
