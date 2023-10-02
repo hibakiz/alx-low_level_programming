@@ -8,20 +8,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fd;
+	int fd;
 	ssize_t number_of_letters;
 	char *buffer;
 
 	if (filename == NULL)
 		return (0);
 	fd = fopen(filename, "r");
-	if (fd == NULL)
+	if (fd == -1)
 		return (0);
 	buffer = malloc(letters);
 	if (buffer == NULL)
 		return (0);
 	number_of_letters = fread(buffer, 1, letters, fd);
-	printf("%s\n", buffer);
+	printf("%s", buffer);
 
 	fclose(fd);
 
