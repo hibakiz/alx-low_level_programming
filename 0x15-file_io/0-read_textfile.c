@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 	number_of_letters = fread(buffer, 1, letters, fd);
-	printf("%s", buffer);
+	printf("%s\n", buffer);
 
 	fclose(fd);
 
