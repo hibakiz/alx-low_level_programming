@@ -9,21 +9,30 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t number_of_letters;
+	ssize_t number_of_letters, write_;
 	char *buffer;
 
 	if (filename == NULL)
 		return (0);
-	fd = fopen(filename, "r");
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	buffer = malloc(letters);
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
+	{
+		close(fd);
 		return (0);
-	number_of_letters = fread(buffer, 1, letters, fd);
-	printf("%s", buffer);
-
-	fclose(fd);
-
-	return (number_of_letters);
+	}
+	number_of_letters = read(fd, buffer, letters);
+	close(fd);
+	if (number_of_letters == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	write_ = write(1, buffer, number_of_letters);
+	free(buffer);
+	if (number_of_letters == write_)
+		return (write_);
+	return (0);
 }
