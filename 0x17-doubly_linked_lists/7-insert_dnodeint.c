@@ -46,19 +46,3 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	return (NULL);
 }
-/**
-* dll_len - print the list
-* @h: DLL
-* Return: number
-*/
-unsigned int dll_len(const dlistint_t *h)
-{
-	unsigned int len = 0;
-
-	while (h)
-	{
-		len++;
-		h = h->next;
-	}
-	return (len);
-}
