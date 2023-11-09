@@ -8,13 +8,16 @@
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, len;
 	dlistint_t *cur, *new, *prev;
 
 	if (h)
 	{
 		cur = *h;
 		prev = cur->prev;
+		len = dll_len(cur);
+		if (idx >= len)
+			return (NULL);
 		while (cur)
 		{
 			if (i == idx)
@@ -35,4 +38,20 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		}
 	return (NULL);
+}
+/**
+* dll_len - print the list
+* @h: DLL
+* Return: number
+*/
+unsigned int dll_len(const dlistint_t *h)
+{
+	unsigned int len = 0;
+
+	while (h)
+	{
+		len++;
+		h = h->next;
+	}
+	return (len);
 }
