@@ -1,0 +1,1 @@
+ayni hata tekrar tekrar
