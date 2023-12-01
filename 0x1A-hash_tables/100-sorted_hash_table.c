@@ -8,26 +8,26 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *table;
+	shash_table_t *sht;
 	unsigned long int i;
 
-	table = malloc(sizeof(shash_table_t));
-	if (table == NULL)
+	sht = malloc(sizeof(shash_table_t));
+	if (sht == NULL)
 		return (NULL);
-	table->size = size;
-	table->shead = NULL;
-	table->stail = NULL;
-	table->array = malloc(sizeof(shash_node_t) * size);
-	if (table->array == NULL)
+	sht->size = size;
+	sht->shead = NULL;
+	sht->stail = NULL;
+	sht->array = malloc(sizeof(shash_node_t) * size);
+	if (sht->array == NULL)
 	{
-		free(table);
+		free(sht);
 		return (NULL);
 	}
 	for (i = 0; i < size; i++)
 	{
-		table->array[i] = NULL;
+		sht->array[i] = NULL;
 	}
-	return (table);
+	return (sht);
 }
 
 /**
@@ -39,26 +39,26 @@ shash_table_t *shash_table_create(unsigned long int size)
  */
 shash_node_t *make_shash_node(const char *key, const char *value)
 {
-	shash_node_t *node;
+	shash_node_t *shn;
 
-	node = malloc(sizeof(shash_node_t));
-	if (node == NULL)
+	shn = malloc(sizeof(shash_node_t));
+	if (shn == NULL)
 		return (NULL);
-	node->key = strdup(key);
-	if (node->key == NULL)
+	shn->key = strdup(key);
+	if (shn->key == NULL)
 	{
-		free(node);
+		free(shn);
 		return (NULL);
 	}
-	node->value = strdup(value);
-	if (node->value == NULL)
+	shn->value = strdup(value);
+	if (shn->value == NULL)
 	{
-		free(node->key);
-		free(node);
+		free(shn->key);
+		free(shn);
 		return (NULL);
 	}
-	node->next = node->snext = node->sprev = NULL;
-	return (node);
+	shn->next = shn->snext = shn->sprev = NULL;
+	return (shn);
 }
 
 /**
@@ -78,12 +78,12 @@ void add_to_sorted_list(shash_table_t *table, shash_node_t *node)
 		return;
 	}
 	tmp = table->shead;
-	while (node != NULL)
+	while (tmp != NULL)
 	{
 		if (strcmp(node->key, tmp->key) < 0)
 		{
-			node->snext = node;
-			node->sprev = node->sprev;
+			node->snext = tmp;
+			node->sprev = tmp->sprev;
 			tmp->sprev = node;
 			if (node->sprev != NULL)
 				node->sprev->snext = node;
@@ -98,6 +98,7 @@ void add_to_sorted_list(shash_table_t *table, shash_node_t *node)
 	table->stail = node;
 }
 
+
 /**
  * shash_table_set - sets a key to a value
  * @ht: hash table
@@ -110,7 +111,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	char *new_value;
-	shash_node_t *node, *tmp;
+	shash_node_t *shn, *tmp;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0 || value == NULL)
@@ -130,15 +131,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		tmp = tmp->next;
 	}
-	node = make_shash_node(key, value);
-	if (node == NULL)
+	shn = make_shash_node(key, value);
+	if (shn == NULL)
 		return (0);
-	node->next = ht->array[index];
-	ht->array[index] = node;
-	add_to_sorted_list(ht, node);
+	shn->next = ht->array[index];
+	ht->array[index] = shn;
+	add_to_sorted_list(ht, shn);
 	return (1);
 }
-
 /**
  * shash_table_get - get a value from the hash table
  * @ht: hash table
@@ -190,7 +190,6 @@ void shash_table_print(const shash_table_t *ht)
 	}
 	printf("}\n");
 }
-
 /**
  * shash_table_print_rev - prints in reverse
  * @ht: hash table to print
@@ -200,7 +199,7 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *tmp;
-	char flag = 0; 
+	char flag = 0; /* 0 before printing any data, 1 after*/
 
 	if (ht == NULL || ht->array == NULL)
 		return;
