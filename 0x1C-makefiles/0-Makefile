@@ -5,4 +5,5 @@ school.o : school.o m.h
 		gcc -c school.c
 main.o : main.o m.h
 		gcc -c main.c
-
+all: school
+		gcc -o school
