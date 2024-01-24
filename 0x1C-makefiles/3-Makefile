@@ -16,6 +16,5 @@ clean :
 oclean :
 		$(RM) -f $(OBJ)
 fclean : clean oclean
-re :
-		$(CC) $(SRC)
+re : oclean all
 
