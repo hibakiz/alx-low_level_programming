@@ -1,1 +1,5 @@
-
+chmod 777 0x1A-hash_tables/*
+git add 0x1A-hash_tables/*
+git commit -m "I do want to leave alx"
+git reset 0x1A-hash_tables/test 0x1A-hash_tables/main.c
+git push

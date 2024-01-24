@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+school : school.o main.o
+		gcc -o school school.o main.o
+school.o : school.o m.h
+		gcc -c school.c
+main.o : main.o m.h
+		gcc -c main.c
+
