@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 CC = gcc
 SRC = main.c school.c
 OBJ = main.o school.o
@@ -9,7 +8,7 @@ $(NAME) : $(OBJ)
 %.o : %.c
 		$(CC) -c $< -o $@
 all: $(NAME)
--include $(OBJ:.o=.d)
+
 clean:
-    rm -f $(OBJ) $(NAME) $(OBJ:.o=.d)
+		rm -f $(OBJ) $(NAME) $(OBJ:.o=.d)
 
