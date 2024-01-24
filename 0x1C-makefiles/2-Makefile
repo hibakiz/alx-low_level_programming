@@ -9,4 +9,5 @@ $(NAME) : $(OBJ)
 %.o : %.c
 		$(CC) -c $< -o $@
 all: $(NAME)
+-include $(OBJ:.o=.d)
 
