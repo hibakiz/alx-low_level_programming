@@ -1,1 +1,10 @@
 #!/usr/bin/env bash
+CC = gcc
+SRC = main.c school.c
+
+school : $(SRC:.c=.o)
+		$(CC) -o $@ $^
+%.o : %.c
+		$(CC) -c $< -o $@
+all: school
+
