@@ -10,4 +10,6 @@ $(NAME) : $(OBJ)
 		$(CC) -c $< -o $@
 all: $(NAME)
 -include $(OBJ:.o=.d)
+clean:
+    rm -f $(OBJ) $(NAME) $(OBJ:.o=.d)
 
