@@ -38,7 +38,7 @@ int _binary_search(int *array, size_t left, size_t right, int value)
 }
 
 /**
- * exponential_search - function that searches for a value in an array of integers
+ * exponential_search - function that searches for
  * using the Linear search algorithm
  * @array: pointer to the first element of the array to search in
  * @size: the number of elements in array
